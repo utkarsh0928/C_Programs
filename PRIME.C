@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+    int num, i, flag = 1;
+clrscr();
+    printf("Enter the integer: ");
+    scanf("%d", &num);
+
+    for (i = 2; i <= num / 2; i++) {
+        if (num % i == 0) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if (num <= 1) {
+        printf("%d is not a prime number.", num);
+    } else {
+        if (flag == 1)
+            printf("%d is a prime number.", num);
+        else
+            printf("%d is not a prime number.", num);
+    }
+    getch();
+}
